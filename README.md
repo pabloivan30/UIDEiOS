@@ -1,4 +1,0 @@
-UIDEiOS
-=======
-
-App UIDE iOS
