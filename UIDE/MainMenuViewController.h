@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "PSTCollectionView.h"
+ 
+@interface MainMenuViewController : UIViewController<PSTCollectionViewDelegateFlowLayout, PSTCollectionViewDataSource>
 
 @end
