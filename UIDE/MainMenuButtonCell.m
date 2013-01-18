@@ -14,18 +14,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _image = [[UIImageView alloc] initWithFrame:frame];
+        [self addSubview:_image];
+        _title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        _title.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:_title];
     }
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

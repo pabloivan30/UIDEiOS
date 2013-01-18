@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D44204116A8EE1700F1A343 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D44204016A8EE1700F1A343 /* MapKit.framework */; };
+		3D44204416A8EE1E00F1A343 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D44204316A8EE1E00F1A343 /* CoreLocation.framework */; };
+		3D44204716A8EE7C00F1A343 /* UIDEMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204616A8EE7C00F1A343 /* UIDEMapsViewController.m */; };
+		3D44204B16A8F3BE00F1A343 /* ZUUIRevealController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204916A8EEBA00F1A343 /* ZUUIRevealController.h */; };
+		3D44204C16A8F3BE00F1A343 /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204A16A8EEBA00F1A343 /* ZUUIRevealController.m */; };
 		A521396F16A8AF34008D00B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521396E16A8AF34008D00B2 /* UIKit.framework */; };
 		A521397116A8AF34008D00B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521397016A8AF34008D00B2 /* Foundation.framework */; };
 		A521397316A8AF34008D00B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521397216A8AF34008D00B2 /* CoreGraphics.framework */; };
@@ -35,6 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D44204016A8EE1700F1A343 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3D44204316A8EE1E00F1A343 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D44204516A8EE7B00F1A343 /* UIDEMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDEMapsViewController.h; sourceTree = "<group>"; };
+		3D44204616A8EE7C00F1A343 /* UIDEMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDEMapsViewController.m; sourceTree = "<group>"; };
+		3D44204916A8EEBA00F1A343 /* ZUUIRevealController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
+		3D44204A16A8EEBA00F1A343 /* ZUUIRevealController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		A521396A16A8AF34008D00B2 /* UIDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A521396E16A8AF34008D00B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A521397016A8AF34008D00B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D44204416A8EE1E00F1A343 /* CoreLocation.framework in Frameworks */,
+				3D44204116A8EE1700F1A343 /* MapKit.framework in Frameworks */,
 				A52139D616A8B93E008D00B2 /* QuartzCore.framework in Frameworks */,
 				A521396F16A8AF34008D00B2 /* UIKit.framework in Frameworks */,
 				A521397116A8AF34008D00B2 /* Foundation.framework in Frameworks */,
@@ -96,9 +109,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D44204816A8EEA900F1A343 /* ZUUIRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				3D44204916A8EEBA00F1A343 /* ZUUIRevealController.h */,
+				3D44204A16A8EEBA00F1A343 /* ZUUIRevealController.m */,
+			);
+			name = ZUUIRevealController;
+			sourceTree = "<group>";
+		};
 		A521395F16A8AF34008D00B2 = {
 			isa = PBXGroup;
 			children = (
+				3D44204316A8EE1E00F1A343 /* CoreLocation.framework */,
+				3D44204016A8EE1700F1A343 /* MapKit.framework */,
 				A52139D516A8B93E008D00B2 /* QuartzCore.framework */,
 				A521397416A8AF34008D00B2 /* UIDE */,
 				A521396D16A8AF34008D00B2 /* Frameworks */,
@@ -127,12 +151,15 @@
 		A521397416A8AF34008D00B2 /* UIDE */ = {
 			isa = PBXGroup;
 			children = (
+				3D44204816A8EEA900F1A343 /* ZUUIRevealController */,
 				A521399716A8B431008D00B2 /* PSTCollectionView */,
 				A521397D16A8AF34008D00B2 /* AppDelegate.h */,
 				A521397E16A8AF34008D00B2 /* AppDelegate.m */,
 				A521398616A8AF35008D00B2 /* MainStoryboard.storyboard */,
 				A521398916A8AF35008D00B2 /* MainMenuViewController.h */,
 				A521398A16A8AF35008D00B2 /* MainMenuViewController.m */,
+				3D44204516A8EE7B00F1A343 /* UIDEMapsViewController.h */,
+				3D44204616A8EE7C00F1A343 /* UIDEMapsViewController.m */,
 				A521397516A8AF34008D00B2 /* Supporting Files */,
 				A52139D716A8BBB9008D00B2 /* MainMenuButtonCell.h */,
 				A52139D816A8BBB9008D00B2 /* MainMenuButtonCell.m */,
@@ -252,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D44204B16A8F3BE00F1A343 /* ZUUIRevealController.h in Sources */,
+				3D44204C16A8F3BE00F1A343 /* ZUUIRevealController.m in Sources */,
 				A521397B16A8AF34008D00B2 /* main.m in Sources */,
 				A521397F16A8AF34008D00B2 /* AppDelegate.m in Sources */,
 				A521398B16A8AF35008D00B2 /* MainMenuViewController.m in Sources */,
@@ -268,6 +297,7 @@
 				A52139BB16A8B431008D00B2 /* PSTGridLayoutRow.m in Sources */,
 				A52139BC16A8B431008D00B2 /* PSTGridLayoutSection.m in Sources */,
 				A52139D916A8BBB9008D00B2 /* MainMenuButtonCell.m in Sources */,
+				3D44204716A8EE7C00F1A343 /* UIDEMapsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

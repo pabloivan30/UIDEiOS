@@ -8,9 +8,10 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuButtonCell.h"
+#import "ZUUIRevealController.h"
 
 NSString *MainMenuButtonIdentifier = @"MainMenuButtonIdentifier";
-CGSize MainMenuButtonCellSize = { .height = 96, .width = 87 };
+CGSize MainMenuButtonCellSize = { .height = 86, .width = 77 };
 
 @interface MainMenuViewController ()
 {
@@ -26,13 +27,15 @@ CGSize MainMenuButtonCellSize = { .height = 96, .width = 87 };
 {
     [super viewDidLoad];
     PSTCollectionViewFlowLayout *layout = [[PSTCollectionViewFlowLayout alloc] init];
+    layout.minimumLineSpacing=25;
+    layout.minimumInteritemSpacing = 10;
     _optionsView.collectionViewLayout = layout;
     _optionsView.delegate = self;
     _optionsView.dataSource = self;
     _optionsView.backgroundColor = [UIColor blackColor];
     [_optionsView registerClass:[MainMenuButtonCell class] forCellWithReuseIdentifier:MainMenuButtonIdentifier];
     
-    _allowedOptionsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"Segue1",@"Segue2",@"Segue3",@"Segue4",@"Segue5",@"Segue6",nil] forKeys:[NSArray arrayWithObjects:@"Button1",@"Button2",@"Button3",@"Button4",@"Button5",@"Button6",nil]];
+    _allowedOptionsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"Segue1",@"Segue2",@"Segue3",@"Segue4",@"Segue5",@"Segue6",@"Segue7",@"Segue8",@"Segue9",nil] forKeys:[NSArray arrayWithObjects:@"Button1",@"Button2",@"Button3",@"Button4",@"Button5",@"Button6",@"Button7",@"Button8",@"Button9",nil]];
     
 }
 
@@ -47,7 +50,8 @@ CGSize MainMenuButtonCellSize = { .height = 96, .width = 87 };
 
 - (PSTCollectionViewCell *)collectionView:(PSTCollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MainMenuButtonCell *button = [collectionView dequeueReusableCellWithReuseIdentifier:MainMenuButtonIdentifier forIndexPath:indexPath];
-    button.title.text = [NSString stringWithFormat:@"{%ld,%ld}", (long)indexPath.row, (long)indexPath.section];
+    NSString *buttonName = [[_allowedOptionsDictionary allKeys] objectAtIndex:[indexPath row]];
+    button.title.text = buttonName;
     
     // load the image for this cell
     //NSString *imageToLoad = [NSString stringWithFormat:@"%d.JPG", indexPath.row];
@@ -70,6 +74,13 @@ CGSize MainMenuButtonCellSize = { .height = 96, .width = 87 };
 
 - (void)collectionView:(PSUICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@ - %@", NSStringFromSelector(_cmd), indexPath);
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+    
+    UIViewController *mapViewController = [storyboard instantiateViewControllerWithIdentifier:@"UIDEMapViewController"];
+    UIViewController *mapViewOptionsController = [storyboard instantiateViewControllerWithIdentifier:@"UIDEMapOptionsViewController"];
+    ZUUIRevealController *revealController = [[ZUUIRevealController alloc]initWithFrontViewController:mapViewController rearViewController:mapViewOptionsController];
+    [self.navigationController pushViewController:revealController animated:YES];
+    
 }
 
 - (void)collectionView:(PSUICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,7 +96,7 @@ CGSize MainMenuButtonCellSize = { .height = 96, .width = 87 };
 
 - (UIEdgeInsets) collectionView:(PSTCollectionView *)collectionView layout:(PSTCollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(50, 20, 50, 20);
+    return UIEdgeInsetsMake(50, 20, 0, 20);
 }
 
 @end
