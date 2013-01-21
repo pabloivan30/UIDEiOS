@@ -73,13 +73,15 @@ CGSize MainMenuButtonCellSize = { .height = 86, .width = 77 };
 #pragma mark Collection View Delegate
 
 - (void)collectionView:(PSUICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@ - %@", NSStringFromSelector(_cmd), indexPath);
+    /*NSLog(@"%@ - %@", NSStringFromSelector(_cmd), indexPath);
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     
     UIViewController *mapViewController = [storyboard instantiateViewControllerWithIdentifier:@"UIDEMapViewController"];
     UIViewController *mapViewOptionsController = [storyboard instantiateViewControllerWithIdentifier:@"UIDEMapOptionsViewController"];
     ZUUIRevealController *revealController = [[ZUUIRevealController alloc]initWithFrontViewController:mapViewController rearViewController:mapViewOptionsController];
-    [self.navigationController pushViewController:revealController animated:YES];
+    [self.navigationController pushViewController:revealController animated:YES];*/
+    
+    [self performSegueWithIdentifier:@"NewsViewControllerSegue" sender:self];
     
 }
 

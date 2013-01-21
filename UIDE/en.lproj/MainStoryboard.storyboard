@@ -27,6 +27,7 @@
                     <navigationItem key="navigationItem" id="46t-SI-mcg"/>
                     <connections>
                         <outlet property="optionsView" destination="9Dt-YC-32Z" id="H9J-bC-Y2m"/>
+                        <segue destination="l6K-5y-jbz" kind="push" identifier="NewsViewControllerSegue" id="FN8-wC-RvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -41,18 +42,103 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ZTq-gM-Y5O">
+                            <view contentMode="scaleToFill" id="RRM-cO-Ovk" userLabel="Map View" customClass="RMMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </mapView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="40h-l0-HrL"/>
+                    <connections>
+                        <outlet property="mapView" destination="RRM-cO-Ovk" id="FTK-Or-zXs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTe-ue-VTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184" y="36"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="PTW-23-cR2">
+            <objects>
+                <viewController id="l6K-5y-jbz" customClass="NewsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8U2-sb-hhL">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="lpE-Jn-H7m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="2LH-yw-ybD">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="l6K-5y-jbz" id="vPH-cX-JTl"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell tag="100" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NewsCell" id="cM7-0e-vYN">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="nf0-gP-weq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Title 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wnc-47-Ysr">
+                                                    <rect key="frame" x="113" y="0.0" width="187" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="This is an example of some custom text that will ocupy 3 lines" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6LT-9v-Vw7">
+                                                    <rect key="frame" x="113" y="20" width="187" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l6K-5y-jbz" id="C8x-MC-GbT"/>
+                                    <outlet property="delegate" destination="l6K-5y-jbz" id="fYi-hi-veP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5zL-bY-hIF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="VXH-vp-kq5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newsSearchBar" destination="2LH-yw-ybD" id="Cfz-7K-fgy"/>
+                        <outlet property="newsTableView" destination="lpE-Jn-H7m" id="ctY-7Z-gzd"/>
+                        <outlet property="searchDisplayController" destination="CD2-qq-IHz" id="zcU-wX-ihd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhx-QP-ovK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="CD2-qq-IHz">
+                    <connections>
+                        <outlet property="delegate" destination="l6K-5y-jbz" id="XUG-Pi-bwc"/>
+                        <outlet property="searchBar" destination="2LH-yw-ybD" id="tf8-zf-age"/>
+                        <outlet property="searchContentsController" destination="l6K-5y-jbz" id="9ze-LC-8aN"/>
+                        <outlet property="searchResultsDataSource" destination="l6K-5y-jbz" id="c9u-bG-jcZ"/>
+                        <outlet property="searchResultsDelegate" destination="l6K-5y-jbz" id="itM-AD-EKK"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="595" y="737"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="laL-dH-dSg">
@@ -94,6 +180,13 @@
                 <relationship kind="outlet" name="optionsView" candidateClass="PSTCollectionView"/>
             </relationships>
         </class>
+        <class className="NewsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="newsSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="newsTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="PSTCollectionView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PSTCollectionView.h"/>
             <relationships>
@@ -101,8 +194,17 @@
                 <relationship kind="outlet" name="delegate"/>
             </relationships>
         </class>
+        <class className="RMMapView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RMMapView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
         <class className="UIDEMapsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDEMapsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="RMMapView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

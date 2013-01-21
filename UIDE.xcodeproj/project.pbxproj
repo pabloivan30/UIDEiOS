@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D44204116A8EE1700F1A343 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D44204016A8EE1700F1A343 /* MapKit.framework */; };
 		3D44204416A8EE1E00F1A343 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D44204316A8EE1E00F1A343 /* CoreLocation.framework */; };
 		3D44204716A8EE7C00F1A343 /* UIDEMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204616A8EE7C00F1A343 /* UIDEMapsViewController.m */; };
 		3D44204B16A8F3BE00F1A343 /* ZUUIRevealController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204916A8EEBA00F1A343 /* ZUUIRevealController.h */; };
 		3D44204C16A8F3BE00F1A343 /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D44204A16A8EEBA00F1A343 /* ZUUIRevealController.m */; };
+		3D5D56F816AB635F0037C9CD /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D56F716AB635F0037C9CD /* MapBox.framework */; };
+		3D5D56FD16AB63E80037C9CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D56FC16AB63E80037C9CD /* libz.dylib */; };
+		3D5D56FF16AB64050037C9CD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D56FE16AB64050037C9CD /* libsqlite3.dylib */; };
+		3D5D570116AB64480037C9CD /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D5D570016AB64480037C9CD /* MapBox.bundle */; };
+		3D5D571316AB6BA40037C9CD /* Historico.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 3D5D571216AB67590037C9CD /* Historico.mbtiles */; };
+		3D5D571A16ACC5880037C9CD /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D571916ACC5880037C9CD /* NewsViewController.m */; };
+		3D5D572216ACD3250037C9CD /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5D572016ACD3250037C9CD /* arrow.png */; };
+		3D5D572316ACD3250037C9CD /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5D572116ACD3250037C9CD /* arrow@2x.png */; };
+		3D5D572416ACD4830037C9CD /* PullToRefreshView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D571E16ACD3110037C9CD /* PullToRefreshView.h */; };
+		3D5D572516ACD4830037C9CD /* PullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D571F16ACD3110037C9CD /* PullToRefreshView.m */; };
+		3D5D572916ACE97F0037C9CD /* SVProgressHUD.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D572716ACE9780037C9CD /* SVProgressHUD.h */; };
+		3D5D572A16ACE97F0037C9CD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D572816ACE9780037C9CD /* SVProgressHUD.m */; };
 		A521396F16A8AF34008D00B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521396E16A8AF34008D00B2 /* UIKit.framework */; };
 		A521397116A8AF34008D00B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521397016A8AF34008D00B2 /* Foundation.framework */; };
 		A521397316A8AF34008D00B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521397216A8AF34008D00B2 /* CoreGraphics.framework */; };
@@ -40,12 +51,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D44204016A8EE1700F1A343 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3D44204316A8EE1E00F1A343 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3D44204516A8EE7B00F1A343 /* UIDEMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDEMapsViewController.h; sourceTree = "<group>"; };
 		3D44204616A8EE7C00F1A343 /* UIDEMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDEMapsViewController.m; sourceTree = "<group>"; };
 		3D44204916A8EEBA00F1A343 /* ZUUIRevealController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		3D44204A16A8EEBA00F1A343 /* ZUUIRevealController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
+		3D5D56F716AB635F0037C9CD /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapBox.framework; path = ../../../../Downloads/MapBox.framework; sourceTree = "<group>"; };
+		3D5D56FA16AB63DE0037C9CD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3D5D56FC16AB63E80037C9CD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3D5D56FE16AB64050037C9CD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3D5D570016AB64480037C9CD /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MapBox.bundle; sourceTree = "<group>"; };
+		3D5D571216AB67590037C9CD /* Historico.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = Historico.mbtiles; sourceTree = "<group>"; };
+		3D5D571816ACC5880037C9CD /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		3D5D571916ACC5880037C9CD /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		3D5D571E16ACD3110037C9CD /* PullToRefreshView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullToRefreshView.h; sourceTree = "<group>"; };
+		3D5D571F16ACD3110037C9CD /* PullToRefreshView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshView.m; sourceTree = "<group>"; };
+		3D5D572016ACD3250037C9CD /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		3D5D572116ACD3250037C9CD /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		3D5D572716ACE9780037C9CD /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		3D5D572816ACE9780037C9CD /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		A521396A16A8AF34008D00B2 /* UIDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A521396E16A8AF34008D00B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A521397016A8AF34008D00B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,8 +121,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5D56FF16AB64050037C9CD /* libsqlite3.dylib in Frameworks */,
+				3D5D56FD16AB63E80037C9CD /* libz.dylib in Frameworks */,
+				3D5D56F816AB635F0037C9CD /* MapBox.framework in Frameworks */,
 				3D44204416A8EE1E00F1A343 /* CoreLocation.framework in Frameworks */,
-				3D44204116A8EE1700F1A343 /* MapKit.framework in Frameworks */,
 				A52139D616A8B93E008D00B2 /* QuartzCore.framework in Frameworks */,
 				A521396F16A8AF34008D00B2 /* UIKit.framework in Frameworks */,
 				A521397116A8AF34008D00B2 /* Foundation.framework in Frameworks */,
@@ -118,11 +144,41 @@
 			name = ZUUIRevealController;
 			sourceTree = "<group>";
 		};
+		3D5D571116AB674F0037C9CD /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D571216AB67590037C9CD /* Historico.mbtiles */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		3D5D571D16ACD3020037C9CD /* PullToRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D571E16ACD3110037C9CD /* PullToRefreshView.h */,
+				3D5D571F16ACD3110037C9CD /* PullToRefreshView.m */,
+			);
+			name = PullToRefreshView;
+			sourceTree = "<group>";
+		};
+		3D5D572616ACE9600037C9CD /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D572716ACE9780037C9CD /* SVProgressHUD.h */,
+				3D5D572816ACE9780037C9CD /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		A521395F16A8AF34008D00B2 = {
 			isa = PBXGroup;
 			children = (
+				3D5D570016AB64480037C9CD /* MapBox.bundle */,
+				3D5D56FE16AB64050037C9CD /* libsqlite3.dylib */,
+				3D5D56FC16AB63E80037C9CD /* libz.dylib */,
+				3D5D56FA16AB63DE0037C9CD /* libsqlite3.0.dylib */,
+				3D5D56F716AB635F0037C9CD /* MapBox.framework */,
 				3D44204316A8EE1E00F1A343 /* CoreLocation.framework */,
-				3D44204016A8EE1700F1A343 /* MapKit.framework */,
 				A52139D516A8B93E008D00B2 /* QuartzCore.framework */,
 				A521397416A8AF34008D00B2 /* UIDE */,
 				A521396D16A8AF34008D00B2 /* Frameworks */,
@@ -151,6 +207,8 @@
 		A521397416A8AF34008D00B2 /* UIDE */ = {
 			isa = PBXGroup;
 			children = (
+				3D5D572616ACE9600037C9CD /* SVProgressHUD */,
+				3D5D571D16ACD3020037C9CD /* PullToRefreshView */,
 				3D44204816A8EEA900F1A343 /* ZUUIRevealController */,
 				A521399716A8B431008D00B2 /* PSTCollectionView */,
 				A521397D16A8AF34008D00B2 /* AppDelegate.h */,
@@ -163,6 +221,8 @@
 				A521397516A8AF34008D00B2 /* Supporting Files */,
 				A52139D716A8BBB9008D00B2 /* MainMenuButtonCell.h */,
 				A52139D816A8BBB9008D00B2 /* MainMenuButtonCell.m */,
+				3D5D571816ACC5880037C9CD /* NewsViewController.h */,
+				3D5D571916ACC5880037C9CD /* NewsViewController.m */,
 			);
 			path = UIDE;
 			sourceTree = "<group>";
@@ -170,6 +230,9 @@
 		A521397516A8AF34008D00B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D5D572016ACD3250037C9CD /* arrow.png */,
+				3D5D572116ACD3250037C9CD /* arrow@2x.png */,
+				3D5D571116AB674F0037C9CD /* Maps */,
 				A521397616A8AF34008D00B2 /* UIDE-Info.plist */,
 				A521397716A8AF34008D00B2 /* InfoPlist.strings */,
 				A521397A16A8AF34008D00B2 /* main.m */,
@@ -264,11 +327,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5D571316AB6BA40037C9CD /* Historico.mbtiles in Resources */,
 				A521397916A8AF34008D00B2 /* InfoPlist.strings in Resources */,
 				A521398116A8AF34008D00B2 /* Default.png in Resources */,
 				A521398316A8AF35008D00B2 /* Default@2x.png in Resources */,
 				A521398516A8AF35008D00B2 /* Default-568h@2x.png in Resources */,
 				A521398816A8AF35008D00B2 /* MainStoryboard.storyboard in Resources */,
+				3D5D570116AB64480037C9CD /* MapBox.bundle in Resources */,
+				3D5D572216ACD3250037C9CD /* arrow.png in Resources */,
+				3D5D572316ACD3250037C9CD /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5D572916ACE97F0037C9CD /* SVProgressHUD.h in Sources */,
+				3D5D572A16ACE97F0037C9CD /* SVProgressHUD.m in Sources */,
+				3D5D572416ACD4830037C9CD /* PullToRefreshView.h in Sources */,
+				3D5D572516ACD4830037C9CD /* PullToRefreshView.m in Sources */,
 				3D44204B16A8F3BE00F1A343 /* ZUUIRevealController.h in Sources */,
 				3D44204C16A8F3BE00F1A343 /* ZUUIRevealController.m in Sources */,
 				A521397B16A8AF34008D00B2 /* main.m in Sources */,
@@ -298,6 +369,7 @@
 				A52139BC16A8B431008D00B2 /* PSTGridLayoutSection.m in Sources */,
 				A52139D916A8BBB9008D00B2 /* MainMenuButtonCell.m in Sources */,
 				3D44204716A8EE7C00F1A343 /* UIDEMapsViewController.m in Sources */,
+				3D5D571A16ACC5880037C9CD /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +448,15 @@
 		A521398F16A8AF35008D00B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIDE/UIDE-Prefix.pch";
 				INFOPLIST_FILE = "UIDE/UIDE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -388,10 +465,15 @@
 		A521399016A8AF35008D00B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIDE/UIDE-Prefix.pch";
 				INFOPLIST_FILE = "UIDE/UIDE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

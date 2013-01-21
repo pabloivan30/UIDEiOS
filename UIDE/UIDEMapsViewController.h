@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapBox/MapBox.h>
 
-@interface UIDEMapsViewController : UIViewController
+@interface UIDEMapsViewController : UIViewController<RMMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet RMMapView *mapView;
 
 @end
